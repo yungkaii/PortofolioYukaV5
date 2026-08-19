@@ -239,10 +239,10 @@
             });
         });
 
-        // 3. TAHAP 2 & 4 & 5: Intersection Observer (Animasi 1x jalan lalu unobserve)
+        // 3. Intersection Observer untuk reveal saat elemen masuk atau keluar viewport.
         const observerOptions = {
             root: null,
-            rootMargin: '0px 0px -12% 0px', // Animasi memicu saat elemen masuk 12% dari bawah layar
+            rootMargin: '0px 0px -15% 0px',
             threshold: 0
         };
 
@@ -250,13 +250,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Lepaskan beban memori setelah animasi selesai
+                } else {
+                    entry.target.classList.remove('is-visible');
                 }
             });
         }, observerOptions);
 
-        // Pasang observer ke semua elemen dengan class animasi
-        document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade').forEach(el => {
+        // Pasang satu observer ke semua elemen dengan class animasi.
+        document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade').forEach(el => {
             revealObserver.observe(el);
         });
 
@@ -265,7 +266,6 @@
             const heroElements = document.querySelectorAll('#home .reveal-up, #home .reveal-left, #home .reveal-right, #home .reveal-scale, #home .reveal-fade');
             heroElements.forEach(el => {
                 el.classList.add('is-visible');
-                revealObserver.unobserve(el);
             });
         }
 
@@ -338,34 +338,6 @@
             }
             requestAnimationFrame(animateRing);
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-    // Threshold 0.15 (15%) memberikan jeda yang cukup agar tidak flickering
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -15% 0px', 
-        threshold: 0.15
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Saat elemen masuk viewport: Tampilkan
-                entry.target.classList.add('is-visible');
-            } else {
-                // Saat elemen KELUAR viewport: Reset ke posisi awal (Invisible)
-                // Karena kita TIDAK memanggil unobserve, observer akan terus memantau elemen ini
-                entry.target.classList.remove('is-visible');
-            }
-        });
-    }, observerOptions);
-
-    // Seleksi semua elemen dengan variasi class
-    const targets = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade');
-    targets.forEach(el => {
-        revealObserver.observe(el);
-    });
-});
 
     </script>
 </body>
