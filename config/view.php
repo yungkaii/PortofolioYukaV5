@@ -8,7 +8,9 @@ return [
 
     'compiled' => env(
         'VIEW_COMPILED_PATH',
-        storage_path('framework/views')
+        env('VERCEL', false)
+            ? sys_get_temp_dir().'/laravel-views'
+            : storage_path('framework/views')
     ),
 
 ];
