@@ -18,7 +18,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'driver' => env('SESSION_DRIVER', 'cookie'),
+=======
+    'driver' => env('SESSION_DRIVER', 'database'),
+>>>>>>> d1c1463 (commit pertama)
 
     /*
     |--------------------------------------------------------------------------

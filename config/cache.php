@@ -15,7 +15,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'default' => env('CACHE_STORE', 'array'),
+=======
+    'default' => env('CACHE_STORE', 'database'),
+>>>>>>> d1c1463 (commit pertama)
 
     /*
     |--------------------------------------------------------------------------

@@ -1,8 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
+=======
+>>>>>>> d1c1463 (commit pertama)
 return [
 
     /*
@@ -126,6 +129,7 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+<<<<<<< HEAD
     /*
 |--------------------------------------------------------------------------
 | Autoloaded Service Providers
@@ -151,4 +155,6 @@ return [
     //
 ])->toArray(),
 
+=======
+>>>>>>> d1c1463 (commit pertama)
 ];

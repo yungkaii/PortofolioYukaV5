@@ -13,7 +13,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'default' => env('QUEUE_CONNECTION', 'sync'),
+=======
+    'default' => env('QUEUE_CONNECTION', 'database'),
+>>>>>>> d1c1463 (commit pertama)
 
     /*
     |--------------------------------------------------------------------------

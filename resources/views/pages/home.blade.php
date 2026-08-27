@@ -72,6 +72,7 @@
     </div>
 </section>
 
+<<<<<<< HEAD
 <!-- MARQUEE SECTION -->
 <div class="marquee-container group relative flex w-full cursor-default overflow-hidden border-y border-bg-border bg-bg-main py-5">
     <div class="marquee-track">
@@ -132,6 +133,21 @@
             <span class="font-bold text-accent-cyan">*</span>
         </div>
 
+=======
+<!-- Infinite Marquee Section -->
+<div class="w-full border-y border-bg-border bg-bg-alt py-4 marquee-container font-mono text-xs text-text-mute uppercase tracking-widest interactable view-project">
+    <div class="marquee-content flex items-center gap-12">
+        <span>LARAVEL ARCHITECTURE</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>UI/UX DESIGN</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>PHP BACKEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>RESPONSIVE FRONTEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>DATABASE MANAGEMENT</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>LARAVEL ARCHITECTURE</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>UI/UX DESIGN</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>PHP BACKEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>RESPONSIVE FRONTEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+        <span>DATABASE MANAGEMENT</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
+>>>>>>> d1c1463 (commit pertama)
     </div>
 </div>
 
@@ -230,6 +246,7 @@
     </a>
 </div>
 
+<<<<<<< HEAD
 <!-- GymTrack Project Showcase -->
 <div class="reveal group relative block mb-32 view-project interactable">
     <a href="https://gymtrack-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
@@ -256,6 +273,8 @@
     </a>
 </div>
 
+=======
+>>>>>>> d1c1463 (commit pertama)
 
 <!-- 03. STACK & CAPABILITIES (BENTO GRID) -->
 <section id="stack" class="py-32 px-6 lg:px-20 border-b border-bg-border">
@@ -361,4 +380,8 @@
     </div>
 </section>
 
+<<<<<<< HEAD
 @endsection
+=======
+@endsection
+>>>>>>> d1c1463 (commit pertama)
