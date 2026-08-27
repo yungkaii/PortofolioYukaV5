@@ -230,6 +230,32 @@
     </a>
 </div>
 
+<!-- GymTrack Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://gymtrack-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/gymtrack-dashboard.jpg') }}"
+                alt="GymTrack Dashboard"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">02 / FITNESS DASHBOARD</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-cyan transition-colors">GymTrack</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Dashboard fitness untuk melacak workout, kalori, streak, volume latihan, dan personal records.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">SupaBase</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-cyan">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
 
 <!-- 03. STACK & CAPABILITIES (BENTO GRID) -->
 <section id="stack" class="py-32 px-6 lg:px-20 border-b border-bg-border">
