@@ -2,17 +2,10 @@
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
-<<<<<<< HEAD
-"scripts": {
-    "build": "vite build",
-    "dev": "vite"
-},
-=======
     "scripts": {
         "build": "vite build",
         "dev": "vite"
     },
->>>>>>> d1c1463 (commit pertama)
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
         "concurrently": "^10.0.3",
