@@ -72,7 +72,6 @@
     </div>
 </section>
 
-<<<<<<< HEAD
 <!-- MARQUEE SECTION -->
 <div class="marquee-container group relative flex w-full cursor-default overflow-hidden border-y border-bg-border bg-bg-main py-5">
     <div class="marquee-track">
@@ -133,21 +132,6 @@
             <span class="font-bold text-accent-cyan">*</span>
         </div>
 
-=======
-<!-- Infinite Marquee Section -->
-<div class="w-full border-y border-bg-border bg-bg-alt py-4 marquee-container font-mono text-xs text-text-mute uppercase tracking-widest interactable view-project">
-    <div class="marquee-content flex items-center gap-12">
-        <span>LARAVEL ARCHITECTURE</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>UI/UX DESIGN</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>PHP BACKEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>RESPONSIVE FRONTEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>DATABASE MANAGEMENT</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>LARAVEL ARCHITECTURE</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>UI/UX DESIGN</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>PHP BACKEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>RESPONSIVE FRONTEND</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
-        <span>DATABASE MANAGEMENT</span> <span><i data-lucide="asterisk" class="w-3 h-3 text-accent-cyan"></i></span>
->>>>>>> d1c1463 (commit pertama)
     </div>
 </div>
 
@@ -242,11 +226,11 @@
                 <span class="px-2 py-1 border border-bg-border text-text-dim">MySQL</span>
                 <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
             </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-cyan">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
         </div>
     </a>
 </div>
 
-<<<<<<< HEAD
 <!-- GymTrack Project Showcase -->
 <div class="reveal group relative block mb-32 view-project interactable">
     <a href="https://gymtrack-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
@@ -261,20 +245,69 @@
 
         <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
             <span class="font-mono text-xs text-text-mute">02 / FITNESS DASHBOARD</span>
-            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-cyan transition-colors">GymTrack</h3>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-purple transition-colors">GymTrack</h3>
             <p class="text-text-dim text-sm leading-relaxed">Dashboard fitness untuk melacak workout, kalori, streak, volume latihan, dan personal records.</p>
             <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
                 <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
                 <span class="px-2 py-1 border border-bg-border text-text-dim">SupaBase</span>
                 <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
             </div>
-            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-cyan">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-purple">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
         </div>
     </a>
 </div>
 
-=======
->>>>>>> d1c1463 (commit pertama)
+<!-- Library Flow Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://library-flow.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#042018] border border-bg-border overflow-hidden relative gpu-layer flex items-center justify-center p-8">
+            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/library-flow.jpg') }}"
+                alt="Library Flow"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">03 / SISTEM INFORMASI</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#dfe94b] transition-colors">Library Flow</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Sistem informasi perpustakaan untuk mengelola katalog, anggota, peminjaman, reservasi, denda, laporan, dan notifikasi.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">SupaBase</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#dfe94b]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- SleepTrack Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://sleeptracker-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#f4f7fb] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/sleeptrack.jpg') }}"
+                alt="SleepTrack Dashboard"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">04 / SLEEP TRACKER</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold text-white group-hover:text-text-dim transition-colors">SleepTrack</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Aplikasi untuk mencatat durasi tidur, energi harian, streak, dan ringkasan kesehatan tidur dalam dashboard yang sederhana.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Dashboard</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Vercel</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#cbd5e1]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
 
 <!-- 03. STACK & CAPABILITIES (BENTO GRID) -->
 <section id="stack" class="py-32 px-6 lg:px-20 border-b border-bg-border">
@@ -380,8 +413,4 @@
     </div>
 </section>
 
-<<<<<<< HEAD
 @endsection
-=======
-@endsection
->>>>>>> d1c1463 (commit pertama)

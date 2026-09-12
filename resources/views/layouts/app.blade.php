@@ -110,7 +110,6 @@
 .reveal-delay-300 { transition-delay: 300ms; }
 .reveal-delay-400 { transition-delay: 400ms; }
 
-<<<<<<< HEAD
 /* INFINITE MARQUEE ANIMATION */
 .marquee-track {
     display: flex;
@@ -136,8 +135,6 @@
 }
 
 
-=======
->>>>>>> d1c1463 (commit pertama)
     </style>
 </head>
 <body class="antialiased font-sans selection:bg-accent-cyan selection:text-bg-main">
@@ -242,17 +239,10 @@
             });
         });
 
-<<<<<<< HEAD
         // 3. Intersection Observer untuk reveal saat elemen masuk atau keluar viewport.
         const observerOptions = {
             root: null,
             rootMargin: '0px 0px -15% 0px',
-=======
-        // 3. TAHAP 2 & 4 & 5: Intersection Observer (Animasi 1x jalan lalu unobserve)
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -12% 0px', // Animasi memicu saat elemen masuk 12% dari bawah layar
->>>>>>> d1c1463 (commit pertama)
             threshold: 0
         };
 
@@ -260,23 +250,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-<<<<<<< HEAD
                 } else {
                     entry.target.classList.remove('is-visible');
-=======
-                    observer.unobserve(entry.target); // Lepaskan beban memori setelah animasi selesai
->>>>>>> d1c1463 (commit pertama)
                 }
             });
         }, observerOptions);
 
-<<<<<<< HEAD
         // Pasang satu observer ke semua elemen dengan class animasi.
         document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade').forEach(el => {
-=======
-        // Pasang observer ke semua elemen dengan class animasi
-        document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade').forEach(el => {
->>>>>>> d1c1463 (commit pertama)
             revealObserver.observe(el);
         });
 
@@ -285,10 +266,6 @@
             const heroElements = document.querySelectorAll('#home .reveal-up, #home .reveal-left, #home .reveal-right, #home .reveal-scale, #home .reveal-fade');
             heroElements.forEach(el => {
                 el.classList.add('is-visible');
-<<<<<<< HEAD
-=======
-                revealObserver.unobserve(el);
->>>>>>> d1c1463 (commit pertama)
             });
         }
 
@@ -362,37 +339,6 @@
             requestAnimationFrame(animateRing);
         }
 
-<<<<<<< HEAD
-=======
-        document.addEventListener('DOMContentLoaded', () => {
-    // Threshold 0.15 (15%) memberikan jeda yang cukup agar tidak flickering
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px 0px -15% 0px', 
-        threshold: 0.15
-    };
-
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Saat elemen masuk viewport: Tampilkan
-                entry.target.classList.add('is-visible');
-            } else {
-                // Saat elemen KELUAR viewport: Reset ke posisi awal (Invisible)
-                // Karena kita TIDAK memanggil unobserve, observer akan terus memantau elemen ini
-                entry.target.classList.remove('is-visible');
-            }
-        });
-    }, observerOptions);
-
-    // Seleksi semua elemen dengan variasi class
-    const targets = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade');
-    targets.forEach(el => {
-        revealObserver.observe(el);
-    });
-});
-
->>>>>>> d1c1463 (commit pertama)
     </script>
 </body>
 </html>

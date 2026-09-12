@@ -3,14 +3,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
-<<<<<<< HEAD
     "keywords": [
         "laravel",
         "framework"
     ],
-=======
-    "keywords": ["laravel", "framework"],
->>>>>>> d1c1463 (commit pertama)
     "license": "MIT",
     "require": {
         "php": "^8.3",
@@ -72,13 +68,10 @@
         ],
         "pre-package-uninstall": [
             "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
-<<<<<<< HEAD
         ],
         "vercel": [
             "npm ci --ignore-scripts",
             "npm run build"
-=======
->>>>>>> d1c1463 (commit pertama)
         ]
     },
     "extra": {
