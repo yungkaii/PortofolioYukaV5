@@ -235,7 +235,7 @@
 <div class="reveal group relative block mb-32 view-project interactable">
     <a href="https://gymtrack-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
-            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[#ef4444]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
             <img
                 src="{{ asset('images/gymtrack-dashboard.jpg') }}"
                 alt="GymTrack Dashboard"
@@ -261,7 +261,7 @@
 <div class="reveal group relative block mb-32 view-project interactable">
     <a href="https://library-flow.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#042018] border border-bg-border overflow-hidden relative gpu-layer flex items-center justify-center p-8">
-            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
             <img
                 src="{{ asset('images/library-flow.jpg') }}"
                 alt="Library Flow"
@@ -309,6 +309,162 @@
     </a>
 </div>
 
+<!-- KasirKita Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://github.com/yungkaii/KasirKita/tree/main" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef2e9] border border-bg-border overflow-hidden relative gpu-layer p-5 md:p-8">
+            <div class="absolute inset-0 bg-[#4ade80]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+             <img
+                src="{{ asset('images/kasirkita.jpg') }}"
+                alt="KasirKita Dashboard"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">05 / POINT OF SALE</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#dfe94b] transition-colors">KasirKita</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Website kasir untuk membantu pemilik toko mengelola produk, stok, transaksi, dan penjualan harian dalam satu dashboard.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">React</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#dfe94b]">VIEW ON GITHUB <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- PocketWise Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://pocket-wise-six.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#4f80ed] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/pocketwise.jpg') }}"
+                alt="PocketWise"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">06 / PERSONAL FINANCE</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#4f80ed] transition-colors">PocketWise</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Aplikasi manajemen keuangan untuk memantau pengeluaran, mengatur anggaran, dan mencapai tujuan finansial dengan lebih bijak.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Supabase</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Node.js</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#4f80ed]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- HangGame Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://hang-game-yuka.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef0fb] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/HangGame.jpg') }}"
+                alt="HangGame Tebak Kata"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">07 / WORD GAME</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-purple transition-colors">HangGame</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Game tebak kata interaktif dengan sistem kesempatan, hint, streak, skor, dan kategori untuk membuat permainan semakin menantang.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">HTML/CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Vercel</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-purple">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- Ular Jawa Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://yungkaii.github.io/ular-khas-jawav2/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#edf0ff] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/ularjawa.jpg') }}"
+                alt="Ular Jawa"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">08 / BROWSER GAME</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#ef4444] transition-colors">Ular Jawa</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Game ular klasik dengan sentuhan lokal yang ringan, seru, dan dapat dimainkan langsung melalui browser.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">HTML/CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">GitHub Pages</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#ef4444]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- AdoptMe Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://github.com/yungkaii/pet-profit-tracker" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef2e9] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-[#dfe94b]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/adoptme.jpg') }}"
+                alt="AdoptMe Pet Profit Tracker"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">09 / PERSONAL TOOL</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#4ade80] transition-colors">AdoptMe Pet Manager</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Pet Profit Tracker yang dibuat untuk personal use. Project ini tidak dipublikasikan sebagai aplikasi publik, tetapi source code-nya tersedia di GitHub sebagai dokumentasi dan referensi pengembangan.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Supabase</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Node.js</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#4ade80]">VIEW ON GITHUB <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- OldPortofolio Project Showcase -->
+<div class="reveal group relative block mb-32 view-project interactable">
+    <a href="https://yungkaii.github.io/portofolio-yukav3/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#18222b] border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/oldportofolio.jpg') }}"
+                alt="OldPortofolio"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">10 / PORTFOLIO WEBSITE</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-purple transition-colors">OldPortofolio</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Portofolio versi sebelumnya yang menampilkan perjalanan, karya, dan eksplorasi awal dalam membangun pengalaman web personal.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">HTML</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-purple">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
 <!-- 03. STACK & CAPABILITIES (BENTO GRID) -->
 <section id="stack" class="py-32 px-6 lg:px-20 border-b border-bg-border">
     <div class="max-w-7xl mx-auto">
@@ -318,17 +474,20 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             
             <div class="reveal md:col-span-2 bg-bg-card border border-bg-border p-8 hover:border-text-dim transition-colors relative overflow-hidden group interactable">
-                <div class="absolute top-0 right-0 w-32 h-32 bg-[#FF2D20]/10 rounded-full blur-[50px] group-hover:bg-[#FF2D20]/20 transition-all pointer-events-none gpu-layer"></div>
+                <div class="absolute top-0 right-0 w-32 h-32 bg-[#68d391]/10 rounded-full blur-[50px] group-hover:bg-[#68d391]/20 transition-all pointer-events-none gpu-layer"></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div>
                         <i data-lucide="server" class="w-8 h-8 text-white mb-6"></i>
-                        <h3 class="font-display text-2xl font-bold mb-2">Backend & Architecture</h3>
-                        <p class="text-text-dim text-sm max-w-md">Membangun arsitektur yang solid, aman, dan scalable. Pengelolaan database relasional dan pembuatan sistem CMS.</p>
+                        <h3 class="font-display text-2xl font-bold mb-2">Backend & Services</h3>
+                        <p class="text-text-dim text-sm max-w-md">Membangun backend yang solid dan scalable dengan API, database, autentikasi, serta layanan cloud untuk aplikasi modern.</p>
                     </div>
-                    <div class="flex gap-4 mt-8 font-mono text-xs">
-                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#FF2D20] rounded-full"></span> Laravel</span>
-                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#777BB4] rounded-full"></span> PHP</span>
-                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4479A1] rounded-full"></span> MySQL</span>
+                    <div class="flex flex-wrap gap-4 mt-8 font-mono text-xs">
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#ff2d20] rounded-full"></span> Laravel</span>
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#777bb4] rounded-full"></span> PHP</span>
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#4479a1] rounded-full"></span> MySQL</span>
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#68d391] rounded-full"></span> Node.js</span>
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#3ecf8e] rounded-full"></span> Supabase</span>
+                        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#ffca28] rounded-full"></span> Firebase</span>
                     </div>
                 </div>
             </div>
@@ -338,9 +497,10 @@
                 <h3 class="font-display text-xl font-bold mb-2">Frontend</h3>
                 <p class="text-text-dim text-sm mb-8">Membuat antarmuka responsif yang bekerja sempurna di seluruh perangkat.</p>
                 <div class="flex flex-col gap-2 font-mono text-xs">
-                    <div class="flex justify-between items-center border-b border-bg-border pb-2"><span>Tailwind CSS</span> <span class="text-text-mute">PRIMARY</span></div>
-                    <div class="flex justify-between items-center border-b border-bg-border pb-2"><span>JavaScript</span> <span class="text-text-mute">FAMILIAR</span></div>
-                    <div class="flex justify-between items-center pt-1"><span>HTML/CSS</span> <span class="text-text-mute">PRIMARY</span></div>
+                    <div class="flex justify-between items-center border-b border-bg-border pb-2"><span>TypeScript</span> <span class="text-text-mute">PRIMARY</span></div>
+                    <div class="flex justify-between items-center border-b border-bg-border pb-2"><span>React</span> <span class="text-text-mute">PRIMARY</span></div>
+                    <div class="flex justify-between items-center border-b border-bg-border pb-2"><span>Vite</span> <span class="text-text-mute">BUILD TOOL</span></div>
+                    <div class="flex justify-between items-center pt-1"><span>Tailwind CSS</span> <span class="text-text-mute">FAMILIAR</span></div>
                 </div>
             </div>
 
@@ -359,8 +519,8 @@
                     <div class="relative z-10">
                         <div class="w-4 h-4 rounded-full bg-bg-main border-2 border-accent-cyan mb-4 mx-auto md:mx-0 shadow-[0_0_10px_#00FFD5]"></div>
                         <div class="font-mono text-xs text-accent-cyan">Saat Ini</div>
-                        <div class="font-bold text-white mt-1">Framework & Sistem</div>
-                        <div class="text-xs text-text-dim mt-1">PHP, Laravel, Tailwind CSS</div>
+                        <div class="font-bold text-white mt-1">Modern Web Stack</div>
+                        <div class="text-xs text-text-dim mt-1">PHP, Laravel, MySQL, TypeScript, React</div>
                     </div>
                     
                     <div class="relative z-10">
