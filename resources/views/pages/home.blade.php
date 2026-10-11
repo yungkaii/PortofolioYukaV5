@@ -3,20 +3,20 @@
 @section('content')
 
 <!-- 00. HERO SECTION -->
-<section id="home" class="min-h-screen relative flex items-center pt-20 lg:pt-0 px-6 lg:px-20 overflow-hidden">
+<section id="home" class="min-h-screen relative flex items-center pt-24 sm:pt-20 lg:pt-0 px-6 sm:px-8 lg:px-12 xl:px-20 overflow-hidden">
     <!-- Subtle glow behind hero (GPU Layer) -->
     <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-accent-cyan/5 rounded-full blur-[120px] pointer-events-none gpu-layer"></div>
 
-    <div class="w-full max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center relative z-10">
+    <div class="w-full max-w-7xl mx-auto grid xl:grid-cols-12 gap-8 items-center relative z-10">
         
         <!-- Left: Typography -->
-        <div class="lg:col-span-7 flex flex-col gap-6">
+        <div class="xl:col-span-7 flex flex-col gap-6">
             <div class="reveal font-mono text-sm tracking-[0.2em] text-text-dim uppercase flex items-center gap-4">
                 <span class="w-8 h-[1px] bg-accent-cyan"></span>
                 Hello, I'm Yukafii
             </div>
             
-            <h1 class="reveal reveal-delay-1 font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight text-white">
+            <h1 class="reveal reveal-delay-1 font-display text-[clamp(2.25rem,12vw,3rem)] min-[480px]:text-5xl md:text-7xl 2xl:text-8xl font-bold leading-[1.05] tracking-tight text-white">
                 I BUILD <br>
                 <span class="text-accent-cyan relative inline-block">
                     DIGITAL
@@ -30,20 +30,20 @@
             </p>
             
             <div class="reveal reveal-delay-2 mt-4 flex flex-wrap gap-4 font-mono text-sm">
-                <a href="#work" class="interactable group relative px-8 py-4 bg-white text-bg-main font-bold flex items-center gap-3 overflow-hidden">
+                <a href="#work" class="interactable group relative px-5 sm:px-8 py-4 bg-white text-bg-main font-bold flex items-center gap-3 overflow-hidden">
                     <span class="relative z-10 group-hover:translate-x-1 transition-transform">VIEW MY WORK</span>
                     <i data-lucide="arrow-right" class="relative z-10 w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
                     <div class="absolute inset-0 bg-accent-cyan transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-300 ease-out"></div>
                 </a>
                 
-                <a href="#contact" class="interactable px-8 py-4 border border-bg-border text-text-main hover:border-accent-cyan hover:text-accent-cyan transition-colors flex items-center gap-3">
+                <a href="#contact" class="interactable px-5 sm:px-8 py-4 border border-bg-border text-text-main hover:border-accent-cyan hover:text-accent-cyan transition-colors flex items-center gap-3">
                     CONTACT ME
                 </a>
             </div>
         </div>
 
         <!-- Right: Developer Interactive Terminal -->
-        <div class="reveal lg:col-span-5 hidden md:block">
+        <div class="reveal xl:col-span-5 hidden xl:block">
             <div class="bg-bg-card rounded-lg border border-bg-border shadow-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-500 interactable gpu-layer">
                 <div class="bg-bg-alt px-4 py-3 flex items-center gap-2 border-b border-bg-border">
                     <div class="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
@@ -136,12 +136,12 @@
 </div>
 
 <!-- 01. ABOUT SECTION -->
-<section id="about" class="py-32 px-6 lg:px-20 border-b border-bg-border">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+<section id="about" class="scroll-mt-4 lg:scroll-mt-0 py-20 sm:py-24 lg:py-32 px-6 sm:px-8 lg:px-12 xl:px-20 border-b border-bg-border">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16">
         <div class="relative">
             <div class="sticky top-32">
                 <span class="reveal font-mono text-accent-cyan text-sm mb-4 block">01 &mdash; ABOUT</span>
-                <h2 class="reveal font-display text-4xl md:text-5xl font-bold leading-tight mb-6">
+                <h2 class="reveal font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
                     BUILDING FOR <br>THE WEB, ONE <br>PROBLEM AT A TIME.
                 </h2>
                 <div class="hidden lg:block absolute -left-20 top-40 text-[200px] font-display font-bold text-bg-border opacity-20 pointer-events-none select-none">
@@ -181,12 +181,12 @@
 </section>
 
 <!-- 02. SELECTED WORK (PORTFOLIO) -->
-<section id="work" class="py-32 px-6 lg:px-20 border-b border-bg-border bg-bg-alt">
+<section id="work" class="scroll-mt-4 lg:scroll-mt-0 py-20 sm:py-24 lg:py-32 px-6 sm:px-8 lg:px-12 xl:px-20 border-b border-bg-border bg-bg-alt">
     <div class="max-w-7xl mx-auto">
-        <div class="flex items-end justify-between mb-20">
+        <div class="flex items-end justify-between mb-12 sm:mb-16 lg:mb-20">
             <div>
                 <span class="reveal font-mono text-accent-cyan text-sm mb-4 block">02 &mdash; SELECTED WORK</span>
-                <h2 class="reveal font-display text-4xl md:text-5xl font-bold">PROYEK UTAMA</h2>
+                <h2 class="reveal font-display text-3xl sm:text-4xl md:text-5xl font-bold">PROYEK UTAMA</h2>
             </div>
             <a href="#" class="reveal hidden md:flex items-center gap-2 font-mono text-sm text-text-dim hover:text-white transition-colors">
                 VIEW ALL PROJECTS <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
@@ -194,7 +194,7 @@
         </div>
 
 <!-- Large Project Showcase 1 -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <!-- Wrap seluruh konten dalam <a> agar bisa diklik menuju URL project -->
     <a href="https://smpbinakaryakreatif.my.id" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         
@@ -232,7 +232,7 @@
 </div>
 
 <!-- GymTrack Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://gymtrack-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-[#ef4444]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -258,7 +258,7 @@
 </div>
 
 <!-- Library Flow Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://library-flow.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#042018] border border-bg-border overflow-hidden relative gpu-layer flex items-center justify-center p-8">
             <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -284,7 +284,7 @@
 </div>
 
 <!-- SleepTrack Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://sleeptracker-yuka.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#f4f7fb] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -310,7 +310,7 @@
 </div>
 
 <!-- KasirKita Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://github.com/yungkaii/KasirKita/tree/main" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef2e9] border border-bg-border overflow-hidden relative gpu-layer p-5 md:p-8">
             <div class="absolute inset-0 bg-[#4ade80]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -336,7 +336,7 @@
 </div>
 
 <!-- PocketWise Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://pocket-wise-six.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#4f80ed] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -362,7 +362,7 @@
 </div>
 
 <!-- HangGame Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://hang-game-yuka.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef0fb] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -388,7 +388,7 @@
 </div>
 
 <!-- Ular Jawa Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://yungkaii.github.io/ular-khas-jawav2/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#edf0ff] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -414,7 +414,7 @@
 </div>
 
 <!-- AdoptMe Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://github.com/yungkaii/pet-profit-tracker" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#eef2e9] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-[#dfe94b]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -440,7 +440,7 @@
 </div>
 
 <!-- OldPortofolio Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://yungkaii.github.io/portofolio-yukav3/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#18222b] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -466,7 +466,7 @@
 </div>
 
 <!-- RoutineUp Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://routine-up-yuka.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row items-center gap-8 cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#f4efe7] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -492,7 +492,7 @@
 </div>
 
 <!-- Museum Web Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://story-of-human.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-[#18222b] border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -518,7 +518,7 @@
 </div>
 
 <!-- Airbus Project Showcase -->
-<div class="reveal group relative block mb-32 view-project interactable">
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
     <a href="https://aerolog-a320.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
         <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
             <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
@@ -531,28 +531,106 @@
 
         <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
             <span class="font-mono text-xs text-text-mute">13 / AVIATION PROJECT</span>
-            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-accent-cyan transition-colors">Airbus</h3>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#facc15] transition-colors">Airbus</h3>
             <p class="text-text-dim text-sm leading-relaxed">Aplikasi log perawatan dan troubleshooting Airbus A320 untuk penggunaan personal. Catat riwayat maintenance, defect dan telemetry, serta dokumentasikan bukti foto; seluruh data disimpan terenkripsi di browser lokal.</p>
             <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
                 <span class="px-2 py-1 border border-bg-border text-text-dim">Typescript</span>
                 <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
                 <span class="px-2 py-1 border border-bg-border text-text-dim">Next.js</span>
             </div>
-            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-accent-cyan">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#facc15]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- 0713 Game Project Showcase -->
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
+    <a href="https://0713-game.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/0713-game.png') }}"
+                alt="0713 Game"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">14 / BROWSER GAME</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#ef4444] transition-colors">0713 Game</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Game browser bernuansa gelap dengan tampilan retro dan misi yang dibangun di sekitar satu batas waktu: jangan sampai jam menunjukkan 07:14. Dilengkapi menu permainan serta pengaturan kontrol.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">HTML</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">JavaScript</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#ef4444]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- TemanRuang AI Project Showcase -->
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
+    <a href="https://temanruang-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-accent-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/TemanRuangAI.png') }}"
+                alt="TemanRuang AI"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-ml-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">15 / AI WEB APPLICATION</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#2563eb] transition-colors">TemanRuang AI</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Ruang curhat berbasis AI yang bisa mendengarkan tanpa menghakimi, memberi saran praktis, atau membantu mengurai masalah. Pilih gaya respons yang kamu butuhkan dan lanjutkan percakapan dengan nyaman.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">API</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#2563eb]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
+        </div>
+    </a>
+</div>
+
+<!-- Bantu Jelasin Project Showcase -->
+<div class="reveal group relative block mb-20 sm:mb-24 lg:mb-32 view-project interactable">
+    <a href="https://bantu-jelasin.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex flex-col lg:flex-row-reverse gap-8 items-center cursor-pointer">
+        <div class="w-full lg:w-2/3 aspect-[4/3] bg-bg-card border border-bg-border overflow-hidden relative gpu-layer">
+            <div class="absolute inset-0 bg-[#f472b6]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+            <img
+                src="{{ asset('images/bantujelasin.png') }}"
+                alt="Bantu Jelasin — alat untuk menyederhanakan teks rumit"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            >
+        </div>
+
+        <div class="w-full lg:w-1/3 flex flex-col gap-4 relative z-20 lg:-mr-12 lg:bg-bg-main lg:p-8 lg:border lg:border-bg-border">
+            <span class="font-mono text-xs text-text-mute">16 / TEXT SIMPLIFIER</span>
+            <h3 class="font-display text-2xl lg:text-3xl font-bold group-hover:text-[#f472b6] transition-colors">Bantu Jelasin</h3>
+            <p class="text-text-dim text-sm leading-relaxed">Bantu memahami surat, tagihan, atau hasil pemeriksaan yang sulit dibaca. Tempelkan teks untuk mendapatkan penjelasan dalam bahasa sehari-hari, lalu pilih gaya penjelasan yang sesuai—dari sangat sederhana hingga lebih terperinci.</p>
+            <div class="flex flex-wrap gap-2 mt-2 font-mono text-[10px]">
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TypeScript</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">Tailwind CSS</span>
+                <span class="px-2 py-1 border border-bg-border text-text-dim">TanStack</span>
+            </div>
+            <span class="mt-2 flex items-center gap-2 font-mono text-xs text-[#f472b6]">OPEN PROJECT <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i></span>
         </div>
     </a>
 </div>
 
 
 <!-- 03. STACK & CAPABILITIES (BENTO GRID) -->
-<section id="stack" class="py-32 px-6 lg:px-20 border-b border-bg-border">
+<section id="stack" class="scroll-mt-4 lg:scroll-mt-0 py-20 sm:py-24 lg:py-32 px-6 sm:px-8 lg:px-12 xl:px-20 border-b border-bg-border">
     <div class="max-w-7xl mx-auto">
         <span class="reveal font-mono text-accent-cyan text-sm mb-4 block">03 &mdash; TECH STACK</span>
-        <h2 class="reveal font-display text-4xl md:text-5xl font-bold mb-16">ALAT & TEKNOLOGI</h2>
+        <h2 class="reveal font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-10 sm:mb-12 lg:mb-16">ALAT & TEKNOLOGI</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             
-            <div class="reveal md:col-span-2 bg-bg-card border border-bg-border p-8 hover:border-text-dim transition-colors relative overflow-hidden group interactable">
+            <div class="reveal md:col-span-2 bg-bg-card border border-bg-border p-6 sm:p-8 hover:border-text-dim transition-colors relative overflow-hidden group interactable">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-[#68d391]/10 rounded-full blur-[50px] group-hover:bg-[#68d391]/20 transition-all pointer-events-none gpu-layer"></div>
                 <div class="relative z-10 flex flex-col h-full justify-between">
                     <div>
@@ -571,7 +649,7 @@
                 </div>
             </div>
 
-            <div class="reveal bg-bg-card border border-bg-border p-8 hover:border-accent-cyan transition-colors group interactable">
+            <div class="reveal bg-bg-card border border-bg-border p-6 sm:p-8 hover:border-accent-cyan transition-colors group interactable">
                 <i data-lucide="layout" class="w-8 h-8 text-accent-cyan mb-6"></i>
                 <h3 class="font-display text-xl font-bold mb-2">Frontend</h3>
                 <p class="text-text-dim text-sm mb-8">Membuat antarmuka responsif yang bekerja sempurna di seluruh perangkat.</p>
@@ -583,7 +661,7 @@
                 </div>
             </div>
 
-            <div class="reveal md:col-span-3 bg-bg-alt border border-bg-border p-8 mt-4">
+            <div class="reveal md:col-span-3 bg-bg-alt border border-bg-border p-6 sm:p-8 mt-4">
                 <h3 class="font-mono text-xs text-text-mute mb-8">LEARNING JOURNEY</h3>
                 <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-4 relative">
                     <div class="hidden md:block absolute top-2 left-0 w-full h-[1px] bg-bg-border"></div>
@@ -615,10 +693,10 @@
 </section>
 
 <!-- 04. CONTACT SECTION -->
-<section id="contact" class="py-32 px-6 lg:px-20 relative">
+<section id="contact" class="scroll-mt-4 lg:scroll-mt-0 py-20 sm:py-24 lg:py-32 px-6 sm:px-8 lg:px-12 xl:px-20 relative">
     <div class="max-w-4xl mx-auto text-center mb-16">
         <span class="reveal font-mono text-accent-cyan text-sm mb-4 block">04 &mdash; CONTACT</span>
-        <h2 class="reveal font-display text-5xl md:text-7xl font-bold mb-6">
+        <h2 class="reveal font-display text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
             LET'S BUILD <br>SOMETHING USEFUL.
         </h2>
         <p class="reveal text-text-dim text-lg">Punya ide, proyek, atau sekadar ingin menyapa? <br class="hidden md:block">Pintu inbox saya selalu terbuka.</p>
