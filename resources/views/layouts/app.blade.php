@@ -176,12 +176,18 @@
         </aside>
 
         <!-- HEADER MOBILE -->
-        <header class="lg:hidden fixed top-0 w-full border-b border-bg-border bg-bg-main/80 backdrop-blur-xl z-50 flex justify-between items-center p-4 md:p-6 gpu-layer">
+        <header class="lg:hidden fixed top-0 w-full border-b border-bg-border bg-bg-main/80 backdrop-blur-xl z-50 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 sm:px-6 sm:py-4 gpu-layer">
             <a href="#home" class="nav-link-click font-display font-bold text-xl">YUKAFII.</a>
+            <nav aria-label="Main navigation" class="flex w-full items-center justify-between gap-2 font-mono text-[9px] tracking-widest text-text-dim sm:ml-auto sm:w-auto sm:gap-5 sm:text-[10px]">
+                <a href="#about" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">01 ABOUT</a>
+                <a href="#work" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">02 WORK</a>
+                <a href="#stack" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">03 STACK</a>
+                <a href="#contact" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">04 CONTACT</a>
+            </nav>
         </header>
 
         <!-- MAIN CONTENT AREA -->
-        <main class="w-full lg:ml-[100px] xl:ml-[120px]">
+        <main class="min-w-0 w-full lg:ml-[100px] lg:flex-1 xl:ml-[120px]">
             @yield('content')
             <footer class="border-t border-bg-border bg-bg-alt py-12 px-6 lg:px-20 relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none gpu-layer"></div>
