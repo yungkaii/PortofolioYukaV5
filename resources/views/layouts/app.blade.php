@@ -1,183 +1,74 @@
 <!DOCTYPE html>
-<!-- SCROLL BEHAVIOR AUTO: Native scroll tetap murni, smooth scroll hanya via JS untuk navigasi -->
-<html lang="en" style="scroll-behavior: auto !important;" class="bg-[#0A0A0A]">
+<html lang="id" style="scroll-behavior: auto !important;" class="bg-[#0A0A0A]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yukafii | Creative Web Developer</title>
+    <meta name="description" content="Yukafii | Creative Web Developer berbasis di Bogor. Membangun aplikasi web Laravel, React, TypeScript, dan pengalaman digital interaktif.">
+    <title>@yield('title', 'Yukafii | Creative Web Developer')</title>
 
-    <!-- Fonts & Icons -->
+    <!-- Fonts (Space Grotesk + Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: { main: '#0A0A0A', alt: '#101010', card: '#151515', border: '#1C1C1C' },
-                        accent: { cyan: '#00FFD5', purple: '#7C3AED' },
-                        text: { main: '#FFFFFF', dim: '#B5B5B5', mute: '#777777' }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
 
-    <style>
-        /* ==========================================
-           VISUAL & LAYOUT (TIDAK ADA YANG DIUBAH)
-           ========================================== */
-        body { background-color: #0A0A0A; color: #FFFFFF; overflow-x: hidden; }
-        ::selection { background: #00FFD5; color: #0A0A0A; }
-        .gpu-layer { will-change: transform, opacity; transform: translateZ(0); backface-visibility: hidden; }
-        .bg-grid { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(28, 28, 28, 0.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(28, 28, 28, 0.5) 1px, transparent 1px); mask-image: radial-gradient(circle at center, black 40%, transparent 100%); will-change: transform; transform: translateZ(0); contain: strict; }
-        
-        @media (pointer: fine) {
-            body { cursor: none; }
-            .cursor-dot, .cursor-ring { position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9999; border-radius: 50%; will-change: transform; transform: translate3d(-50%, -50%, 0); }
-            .cursor-dot { width: 6px; height: 6px; background-color: #00FFD5; transition: opacity 0.2s ease, background-color 0.2s ease; }
-            .cursor-ring { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.2); transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
-            .hover-active ~ .cursor-ring { width: 50px; height: 50px; border-color: #00FFD5; background: rgba(0,255,213,0.05); }
-        }
-        
-        .scroll-progress { transform-origin: top; transform: scaleY(0) translateZ(0); will-change: transform; }
-        #loader { transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1); will-change: transform; }
-        .loader-hide { transform: translate3d(0, -100%, 0); }
-
-       /* Pastikan base class memiliki transition agar saat .is-visible dihapus, ia kembali ke state semula dengan smooth */
-.reveal, 
-.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade {
-    opacity: 0;
-    will-change: opacity, transform;
-    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), 
-                transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* State saat muncul */
-.is-visible {
-    opacity: 1 !important;
-    transform: translate3d(0, 0, 0) scale(1) !important;
-}
-
-/* Pastikan semua variasi memiliki base state yang benar saat .is-visible tidak ada */
-.reveal-up { transform: translateY(40px); }
-.reveal-left { transform: translateX(-40px); }
-.reveal-right { transform: translateX(40px); }
-.reveal-scale { transform: scale(0.96); }
-.reveal-fade { transform: translateY(0); }
-
-        /* Stagger Delays (Elegan & Ringan) */
-        .delay-75 { transition-delay: 75ms; }
-        .delay-150 { transition-delay: 150ms; }
-        .delay-225 { transition-delay: 225ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
-
-        /* Optimasi Mobile: Hapus blur agar FPS tidak drop, percepat sedikit timing */
-        @media (max-width: 768px) {
-            .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade {
-                filter: none !important; 
-                transition: opacity 600ms ease-out, transform 600ms ease-out;
-            }
-        }
-
-        /* Base Reveal Class */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1), 
-                transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
-    will-change: opacity, transform; /* Optimalisasi GPU */
-}
-
-/* State saat muncul */
-.reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Stagger Delay Classes */
-.reveal-delay-100 { transition-delay: 100ms; }
-.reveal-delay-200 { transition-delay: 200ms; }
-.reveal-delay-300 { transition-delay: 300ms; }
-.reveal-delay-400 { transition-delay: 400ms; }
-
-/* INFINITE MARQUEE ANIMATION */
-.marquee-track {
-    display: flex;
-    width: max-content;
-    /* Durasi 30s memastikan animasi terasa premium, tidak terlalu cepat/lambat */
-    animation: scrollMarquee 30s linear infinite;
-    will-change: transform; /* Memberitahu GPU untuk mengoptimalkan layer ini */
-}
-
-/* Optional: Pause animasi saat di-hover (Sesuai permintaan) */
-.marquee-container:hover .marquee-track {
-    animation-play-state: paused;
-}
-
-@keyframes scrollMarquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Menggeser tepat -50% dari total lebar. Karena kita menggunakan 4 grup duplikat, ini akan menciptakan loop yang 100% seamless tanpa patah */
-        transform: translateX(-50%);
-    }
-}
-
-
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="antialiased font-sans selection:bg-accent-cyan selection:text-bg-main">
+<body class="antialiased font-sans bg-bg-main text-text-main selection:bg-accent-cyan selection:text-bg-main">
 
-    <!-- Loading Screen -->
-    <div id="loader" class="fixed inset-0 z-[10000] bg-bg-main flex flex-col items-center justify-center">
-        <div class="font-display text-4xl md:text-6xl font-bold tracking-tighter">YUKAFII.DEV</div>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[10001] focus:px-4 focus:py-2 focus:bg-accent-cyan focus:text-bg-main focus:font-mono focus:text-xs focus:font-bold">
+        SKIP TO CONTENT
+    </a>
+
+    <!-- Loading Screen (Snappy on first visit, click to skip) -->
+    <div id="loader" class="fixed inset-0 z-[10000] bg-bg-main flex flex-col items-center justify-center cursor-pointer" title="Klik untuk melewati">
+        <div class="font-display text-4xl md:text-6xl font-bold tracking-tighter text-white">YUKAFII.DEV</div>
         <div class="mt-4 font-mono text-sm text-text-dim flex items-center gap-2">
-            SYSTEM BOOT <span id="load-counter" class="text-accent-cyan w-8 text-right">0%</span>
+            SYSTEM BOOT <span id="load-counter" class="text-accent-cyan w-9 text-right">0%</span>
         </div>
         <div class="w-48 h-[1px] bg-bg-border mt-4 relative overflow-hidden">
-            <div id="load-bar" class="absolute top-0 left-0 h-full bg-accent-cyan w-0 transition-all duration-100"></div>
+            <div id="load-bar" class="absolute top-0 left-0 h-full bg-accent-cyan w-0 transition-all duration-75"></div>
         </div>
     </div>
 
     <!-- Custom Cursor -->
-    <div class="cursor-dot hidden md:block"></div>
-    <div class="cursor-ring hidden md:block"></div>
+    <div class="cursor-dot hidden md:block" aria-hidden="true"></div>
+    <div class="cursor-ring hidden md:block" aria-hidden="true"></div>
 
-    <!-- Background -->
-    <div class="fixed inset-0 z-[-1] bg-grid opacity-30 pointer-events-none"></div>
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-[-1] bg-grid opacity-30 pointer-events-none" aria-hidden="true"></div>
 
     <div class="flex">
-        <!-- SIDEBAR -->
-        <aside class="hidden lg:flex w-[100px] xl:w-[120px] fixed h-screen border-r border-bg-border bg-bg-main/80 backdrop-blur-xl flex-col items-center justify-between py-8 z-50 gpu-layer">
-            <a href="#home" class="nav-link-click font-display font-bold text-2xl group relative interactable">Y.</a>
-            <div class="h-32 w-[1px] bg-bg-border relative">
-                <div class="scroll-progress absolute top-0 left-0 w-full h-full bg-accent-cyan"></div>
+        <!-- LEFT SIDEBAR (Desktop) -->
+        <aside class="hidden lg:flex w-[100px] xl:w-[120px] fixed h-screen border-r border-bg-border bg-bg-main/85 backdrop-blur-xl flex-col items-center justify-between py-8 z-50 gpu-layer">
+            <a href="#home" class="nav-link-click font-display font-bold text-2xl text-white hover:text-accent-cyan transition-colors group relative interactable">
+                Y<span class="text-accent-cyan">.</span>
+            </a>
+
+            <div class="flex flex-col items-center gap-3">
+                <div class="h-28 w-[1px] bg-bg-border relative">
+                    <div class="scroll-progress absolute top-0 left-0 w-full h-full bg-accent-cyan"></div>
+                </div>
+                <span id="scroll-percent" class="font-mono text-[9px] tracking-wider text-text-mute tabular-nums">00%</span>
             </div>
-            <nav class="flex flex-col gap-8 text-[10px] font-mono tracking-widest text-text-dim">
+
+            <nav aria-label="Main navigation" class="flex flex-col gap-7 text-[10px] font-mono tracking-widest text-text-dim">
                 <a href="#about" class="nav-link-click nav-highlight interactable hover:text-accent-cyan transition-colors" style="writing-mode: vertical-rl; transform: rotate(180deg);">01 ABOUT</a>
                 <a href="#work" class="nav-link-click nav-highlight interactable hover:text-accent-cyan transition-colors" style="writing-mode: vertical-rl; transform: rotate(180deg);">02 WORK</a>
                 <a href="#stack" class="nav-link-click nav-highlight interactable hover:text-accent-cyan transition-colors" style="writing-mode: vertical-rl; transform: rotate(180deg);">03 STACK</a>
                 <a href="#contact" class="nav-link-click nav-highlight interactable hover:text-accent-cyan transition-colors" style="writing-mode: vertical-rl; transform: rotate(180deg);">04 CONTACT</a>
             </nav>
-            <div class="flex flex-col items-center gap-4">
-                <div class="w-2 h-2 rounded-full bg-accent-cyan shadow-[0_0_10px_#00FFD5] animate-pulse interactable"></div>
+
+            <div class="flex flex-col items-center gap-2 group relative">
+                <div class="w-2 h-2 rounded-full bg-accent-cyan shadow-[0_0_10px_#00FFD5] animate-pulse interactable" aria-label="Status: tersedia untuk proyek"></div>
+                <span class="pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute left-full ml-4 whitespace-nowrap px-2.5 py-1 rounded border border-bg-border bg-bg-card font-mono text-[10px] text-text-dim">
+                    Available · Bogor
+                </span>
             </div>
         </aside>
 
-        <!-- HEADER MOBILE -->
-        <header class="lg:hidden fixed top-0 w-full border-b border-bg-border bg-bg-main/80 backdrop-blur-xl z-50 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 sm:px-6 sm:py-4 gpu-layer">
-            <a href="#home" class="nav-link-click font-display font-bold text-xl">YUKAFII.</a>
+        <!-- MOBILE HEADER -->
+        <header class="lg:hidden fixed top-0 w-full border-b border-bg-border bg-bg-main/85 backdrop-blur-xl z-50 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-3 sm:px-6 sm:py-4 gpu-layer">
+            <a href="#home" class="nav-link-click font-display font-bold text-xl text-white">YUKAFII<span class="text-accent-cyan">.</span></a>
             <nav aria-label="Main navigation" class="flex w-full items-center justify-between gap-2 font-mono text-[9px] tracking-widest text-text-dim sm:ml-auto sm:w-auto sm:gap-5 sm:text-[10px]">
                 <a href="#about" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">01 ABOUT</a>
                 <a href="#work" class="nav-link-click nav-highlight interactable py-2 hover:text-accent-cyan transition-colors">02 WORK</a>
@@ -187,164 +78,53 @@
         </header>
 
         <!-- MAIN CONTENT AREA -->
-        <main class="min-w-0 w-full lg:ml-[100px] lg:flex-1 xl:ml-[120px]">
+        <main id="main-content" class="min-w-0 w-full lg:ml-[100px] lg:flex-1 xl:ml-[120px]">
             @yield('content')
-            <footer class="border-t border-bg-border bg-bg-alt py-12 px-6 lg:px-20 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none gpu-layer"></div>
-                <div class="max-w-6xl mx-auto reveal-up">
-                    <h3 class="font-display text-2xl font-bold mb-2">YUKAFII.DEV</h3>
+
+            <footer class="border-t border-bg-border bg-bg-alt py-12 px-6 sm:px-8 lg:px-12 xl:px-20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent-cyan/5 rounded-full blur-[100px] pointer-events-none gpu-layer" aria-hidden="true"></div>
+                <div class="max-w-7xl mx-auto reveal-up flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                    <div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-1">YUKAFII<span class="text-accent-cyan">.</span>DEV</h3>
+                        <p class="font-mono text-xs text-text-mute flex items-center gap-2">
+                            <span>Bogor, Indonesia</span>
+                            <span aria-hidden="true">&middot;</span>
+                            <span data-bogor-clock class="text-text-dim">--:-- WIB</span>
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs text-text-dim">
+                        <a href="#about" class="nav-link-click interactable hover:text-accent-cyan transition-colors">01 ABOUT</a>
+                        <a href="#work" class="nav-link-click interactable hover:text-accent-cyan transition-colors">02 WORK</a>
+                        <a href="#stack" class="nav-link-click interactable hover:text-accent-cyan transition-colors">03 STACK</a>
+                        <a href="#contact" class="nav-link-click interactable hover:text-accent-cyan transition-colors">04 CONTACT</a>
+                        <a
+                            href="https://github.com/yungkaii"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="interactable inline-flex items-center gap-1 text-white hover:text-accent-cyan transition-colors"
+                        >
+                            <span>github.com/yungkaii</span>
+                            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M7 17 17 7M7 7h10v10"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
             </footer>
         </main>
     </div>
 
-    <!-- SCRIPT ENGINE (TIDAK MENGGANGGU NATIVE WHEEL SCROLL) -->
-    <script>
-        lucide.createIcons();
-
-        // 1. Loading Screen
-        document.addEventListener('DOMContentLoaded', () => {
-            let count = 0;
-            const counter = document.getElementById('load-counter');
-            const bar = document.getElementById('load-bar');
-            const interval = setInterval(() => {
-                count += Math.floor(Math.random() * 15) + 5;
-                if(count >= 100) {
-                    count = 100;
-                    clearInterval(interval);
-                    setTimeout(() => {
-                        const loader = document.getElementById('loader');
-                        if (loader) { 
-                            loader.classList.add('loader-hide'); 
-                            setTimeout(() => {
-                                loader.remove();
-                                triggerHeroAnimations(); // Pemicu animasi Hero instan
-                            }, 800); 
-                        }
-                    }, 400);
-                }
-                if (counter) counter.innerText = count + '%';
-                if (bar) bar.style.width = count + '%';
-            }, 50);
-        });
-
-        // 2. TAHAP 1: Smooth Navigation Click API (Native)
-        document.querySelectorAll('.nav-link-click').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if(!targetId || targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    e.preventDefault(); // Mencegah lompatan instan, HANYA untuk event klik ini
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // 3. Intersection Observer untuk reveal saat elemen masuk atau keluar viewport.
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -15% 0px',
-            threshold: 0
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                } else {
-                    entry.target.classList.remove('is-visible');
-                }
-            });
-        }, observerOptions);
-
-        // Pasang satu observer ke semua elemen dengan class animasi.
-        document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade').forEach(el => {
-            revealObserver.observe(el);
-        });
-
-        // TAHAP 7: Fungsi khusus untuk memicu Hero masuk tanpa harus di-scroll (dipanggil saat loader selesai)
-        function triggerHeroAnimations() {
-            const heroElements = document.querySelectorAll('#home .reveal-up, #home .reveal-left, #home .reveal-right, #home .reveal-scale, #home .reveal-fade');
-            heroElements.forEach(el => {
-                el.classList.add('is-visible');
-            });
-        }
-
-        // 4. Scroll Progress & Nav Highlight pasif (rAF throttling = Tidak bikin berat)
-        const progressBar = document.querySelector('.scroll-progress');
-        const navLinks = document.querySelectorAll('.nav-highlight');
-        let cachedDocHeight = 0;
-        let sectionOffsets = [];
-        let isScrollTicking = false;
-
-        function updateLayoutCache() {
-            cachedDocHeight = document.body.scrollHeight - window.innerHeight;
-            sectionOffsets = Array.from(document.querySelectorAll('section')).map(sec => ({
-                id: sec.getAttribute('id'), top: sec.offsetTop
-            }));
-        }
-        window.addEventListener('load', updateLayoutCache);
-        window.addEventListener('resize', updateLayoutCache, { passive: true });
-
-        window.addEventListener('scroll', () => {
-            if (!isScrollTicking) {
-                requestAnimationFrame(() => {
-                    const scrollY = window.scrollY;
-                    
-                    // Update Progress Bar
-                    if (progressBar && cachedDocHeight > 0) {
-                        progressBar.style.transform = `scaleY(${Math.min(scrollY / cachedDocHeight, 1)}) translateZ(0)`;
-                    }
-                    
-                    // Update Active Nav Link
-                    let current = '';
-                    for (let i = 0; i < sectionOffsets.length; i++) {
-                        if (scrollY >= sectionOffsets[i].top - 300) current = sectionOffsets[i].id;
-                    }
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href').includes(current)) {
-                            link.classList.add('text-accent-cyan'); link.classList.remove('text-text-dim');
-                        } else {
-                            link.classList.remove('text-accent-cyan'); link.classList.add('text-text-dim');
-                        }
-                    });
-                    
-                    isScrollTicking = false;
-                });
-                isScrollTicking = true;
-            }
-        }, { passive: true });
-
-        // 5. Custom Cursor (Tetap dipertahankan, ringan dengan rAF)
-        const dot = document.querySelector('.cursor-dot');
-        const ring = document.querySelector('.cursor-ring');
-        if (window.matchMedia("(pointer: fine)").matches && dot && ring) {
-            let mouseX = -100, mouseY = -100, ringX = -100, ringY = -100;
-            let isCursorTicking = false;
-            window.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX; mouseY = e.clientY;
-                if (!isCursorTicking) {
-                    requestAnimationFrame(() => {
-                        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
-                        isCursorTicking = false;
-                    });
-                    isCursorTicking = true;
-                }
-            }, { passive: true });
-
-            function animateRing() {
-                ringX += (mouseX - ringX) * 0.2; ringY += (mouseY - ringY) * 0.2;
-                ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
-                requestAnimationFrame(animateRing);
-            }
-            requestAnimationFrame(animateRing);
-        }
-
-    </script>
+    <!-- Subtle Back to Top Button -->
+    <button
+        id="back-to-top"
+        type="button"
+        aria-label="Kembali ke atas"
+        class="interactable fixed bottom-6 right-6 z-40 w-10 h-10 rounded-md border border-bg-border bg-bg-card/95 text-text-dim hover:border-accent-cyan hover:text-accent-cyan flex items-center justify-center shadow-lg cursor-pointer"
+    >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"></path>
+        </svg>
+    </button>
 </body>
 </html>
