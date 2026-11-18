@@ -16,6 +16,18 @@ export default defineConfig({
         }),
         tailwindcss(),
     ],
+    build: {
+        rollupOptions: {
+            output: {
+                entryFileNames: (chunkInfo) =>
+                    chunkInfo.facadeModuleId && chunkInfo.facadeModuleId.endsWith('.js')
+                        ? 'assets/app.js'
+                        : 'assets/[name]-entry.js',
+                chunkFileNames: 'assets/[name].js',
+                assetFileNames: 'assets/[name][extname]',
+            },
+        },
+    },
     server: {
         watch: {
             ignored: ['**/storage/framework/views/**'],
